@@ -1,0 +1,424 @@
+/*================================================================== 
+DEFAULT VALUES
+
+FONT FAMILY:  ROBORTO CONDENSED 
+
+Greenish Blue:  #34c6d3  (Buttons, Icons, Links, & Backgrounds)
+Steel Gray:  #41464b  (Headings)
+Blue Bayoux:  #64707b  (Paragraphs)
+White:  #fff  (Text with black backgrounds)
+Black:  #000  
+==================================================================*/
+
+/* General CSS */
+html,
+body {
+    height: 100%;
+    width:auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+p, ul, li {
+    color: #64707b;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h2 {
+    color: #fff;
+}
+
+h3 {
+    color: #41464b;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: transparent;
+    z-index: 1000;
+}
+
+/*=================================================================
+HOME
+==================================================================*/
+#particles-js canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#home {
+    height: 100%;
+    width: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/clement-h-544786-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+#home-heading h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+    #home-heading h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 20px 0 20px 0;
+        text-transform: uppercase;
+    }
+}
+
+.ah-words-wrapper b {
+    white-space:nowrap !important;
+    text-align:center;
+}
+
+
+/*=================================================================
+BUTTONS (GENERIC)
+==================================================================*/
+.btn-general {
+    border-width: 2px;
+    border-radius: 0;
+    padding: 12px 26px 12px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+    z-index: 2;
+}
+
+.btn-white:hover, btn-white:focus {
+    background-color: #fff;
+    color: #41464b;
+    z-index: 2;
+}
+
+.btn-blue {
+    border-color: #34c6d3;
+    color: #34c6d3;
+    z-index: 2;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+    background-color: #34c6d3;
+    color: #fff;
+    z-index: 2;
+}
+
+
+/*=================================================================
+ANIMATE (GENERIC)
+==================================================================*/
+#home-cover,
+#home-heading,
+#home-btn {
+    animation-duration: 1s;
+}
+
+#home-cover {
+    animation-delay: .5s;
+}
+
+#home-heading {
+    animation-delay: .5s;
+}
+
+#home-btn {
+    animation-delay: 1s;
+}
+
+/*=================================================================
+CONTENT (GENERIC)
+==================================================================*/
+
+.content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #34c6d3;
+    margin: 0 auto 30px auto;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0;
+    text-align:center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display:block;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidebar */
+    padding: 0 0;
+    overflow-x: hidden;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.sidenav a {
+    float: left;
+}
+
+.main {
+    margin-left: 0;
+}
+
+.img-fluid {
+    display:none;
+}
+
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidenav a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/*=================================================================
+ABOUT
+==================================================================*/
+
+#about {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.about-name {
+    font-size:300%;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.text-lname {
+    text-decoration: wavy;
+    color: #34c6d3;
+}
+
+.about-desc {
+    padding-left: 15px;
+}
+
+.social {
+    text-align:center;
+    list-style-type:none;
+    display:inline-block;
+    margin: 4px;
+}
+
+/*=================================================================
+SUMMARY
+==================================================================*/
+
+#summary {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.img-fluid {
+    padding-top: 150px;
+
+}
+
+/*=================================================================
+EXPERIENCE
+==================================================================*/
+
+#ex {
+    width: 100%;
+}
+
+#ex-cover {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/keyboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#ex-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#ex-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+#ex-heading h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+}
+
+#experience {
+    padding-top:5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom:5%;
+    text-align: left;
+}
+
+/*=================================================================
+SKILLS
+==================================================================*/
+#skills {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.number-area {
+    background: #E91E63;
+    color: #fff;
+}
+
+.counter {
+    font-size: 45px;
+    color: #111;
+    padding-top:5px;
+}
+
+.single-number i {
+    font-size: 35px;
+}
+
+.single-number p {
+    font-size: 18px;
+}
+
+/*=================================================================
+EDUCATION
+==================================================================*/
+
+#ed {
+    width: 100%;
+}
+
+#ed-cover {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/bookshelfed.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#ed-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#ed-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+#ed-heading h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+}
+
+#education {
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 5%;
+    text-align: left;
+}
